@@ -19,6 +19,8 @@
 3. [Fluxo de Trabalho JIRA](./fluxo-de-trabalho-jira.md)
 4. [Controle de Versão](./controle-de-versao.md)
 
+### Infraestrutura
+
 ### Backend
 
 1. [Bases](./bases.md)
