@@ -4,31 +4,31 @@
   </a>
 </p>
 
-# Onboarding
+# <span style="color:FF204E ">Onboarding</span>
 
-## Introdução
+## <span style="color:A0153E ">Introdução</span>
 
-## Scrum
+## <span style="color:A0153E ">Scrum</span>
 
-## Desenvolvimento
+## <span style="color:A0153E ">Desenvolvimento</span>
 
-### Global
+### <span style="color:5D0E41 ">Global</span>
 
-1. [Clean Code](./clean-code-reference.md)
-2. [Anti Patterns](./anti-patterns.md)
-3. [Fluxo de Trabalho JIRA](./fluxo-de-trabalho-jira.md)
-4. [Controle de Versão](./controle-de-versao.md)
+1. [Clean Code](./desenvolvimento/global/clean-code-reference.md)
+2. [Anti Patterns](./desenvolvimento/global/anti-patterns.md)
+3. [Fluxo de Trabalho JIRA](./desenvolvimento/global/fluxo-de-trabalho-jira.md)
+4. [Controle de Versão](./desenvolvimento/global/controle-de-versao.md)
 
-### Infraestrutura
+### <span style="color:5D0E41 ">Infraestrutura</span>
 
-### Backend
+### <span style="color:5D0E41 ">Backend</span>
 
-1. [Bases](./bases.md)
-2. [Filas](./filas.md)
+1. [Bases](./desenvolvimento/backend/bases.md)
+2. [Filas](./desenvolvimento/backend/filas.md)
 3. [Framework NestJS](https://docs.nestjs.com)
 
-### Frontend
+### <span style="color:5D0E41 ">Frontend</span>
 
-## Emissão de Notas Fiscais
+## <span style="color:A0153E ">MEI (Micro Empreendedor Individual)</span>
 
-## Canais de Comunicação
+## <span style="color:A0153E ">Canais de Comunicação</span>

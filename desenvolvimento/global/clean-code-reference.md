@@ -4,9 +4,9 @@
   </a>
 </p>
 
-# Clean Code - Guia Prático e Exemplos
+# <span style="color:FF204E ;">Clean Code - Guia Prático e Exemplos</span>
 
-## Índice
+## <span style="color:A0153E ">Índice</span>
 
 1. [Introdução](#introdução)
 2. [Variáveis](#variáveis)
@@ -21,7 +21,9 @@
 11. [Comentários](#comentários)
 12. [Traduções](#traduções)
 
-## Introdução
+[VOLTAR](../../README.md)
+
+## <span style="color:A0153E ">Introdução</span>
 
 Princípios da Engenharia de Software, do livro de Robert C. Martin
 [_Código Limpo_](https://www.amazon.com.br/C%C3%B3digo-Limpo-Habilidades-Pr%C3%A1ticas-Software/dp/8576082675),
@@ -33,17 +35,17 @@ Nosso ofício de engenharia de software tem pouco mais de 50 anos e ainda estamo
 
 Mais uma coisa: aprender isto não irá lhe transformar imediatamente em um desenvolvedor de software melhor, trabalhar com eles por muitos anos não quer dizer que você não cometerá erros. Toda porção de código começa com um rascunho, como argila molhada sendo moldada em sua forma final. Finalmente, talhamos as imperfeições quando revisamos com nossos colegas. Não se sinta culpado pelos primeiros rascunhos que ainda precisam de melhorias. Ao invés, desconte em seu código.
 
-## **Variáveis**
+## <span style="color:A0153E ">**Variáveis**</span>
 
-### Use nomes de variáveis que tenham significado e sejam pronunciáveis
+### <span style="color:5D0E41 ">Use nomes de variáveis que tenham significado e sejam pronunciáveis</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const yyyymmdstr = moment().format("YYYY/MM/DD");
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const currentDate = moment().format("YYYY/MM/DD");
@@ -51,9 +53,9 @@ const currentDate = moment().format("YYYY/MM/DD");
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Use o mesmo vocabulário para o mesmo tipo de variável
+### <span style="color:5D0E41 ">Use o mesmo vocabulário para o mesmo tipo de variável</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 getUserInfo();
@@ -61,7 +63,7 @@ getClientData();
 getCustomerRecord();
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 getUser();
@@ -69,18 +71,18 @@ getUser();
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Use nomes pesquisáveis
+### <span style="color:5D0E41 ">Use nomes pesquisáveis</span>
 
 Nós iremos ler mais código que escrever. É importante que o código que escrevemos seja legível e pesquisável. _Não_ dando nomes em variáveis que sejam significativos para entender nosso programa, machucamos nossos leitores. Torne seus nomes pesquisáveis. Ferramentas como [buddy.js](https://github.com/danielstjules/buddy.js) e [ESLint](https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md) podem ajudar a identificar constantes sem nome.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 // Para que diabos serve 86400000?
 setTimeout(blastOff, 86400000);
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 // Declare-as como `const` global em letras maiúsculas.
@@ -91,9 +93,9 @@ setTimeout(blastOff, MILLISECONDS_PER_DAY);
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Use variáveis explicativas
+### <span style="color:5D0E41 ">Use variáveis explicativas</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const address: string = 'One Infinite Loop, Cupertino 95014';
@@ -104,7 +106,7 @@ saveCityZipCode(
 );
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const address = "One Infinite Loop, Cupertino 95014";
@@ -115,11 +117,11 @@ saveCityZipCode(city, zipCode);
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite Mapeamento Mental
+### <span style="color:5D0E41 ">Evite Mapeamento Mental</span>
 
 Explicito é melhor que implícito.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
@@ -134,7 +136,7 @@ locations.forEach((l) => {
 });
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
@@ -150,11 +152,11 @@ locations.forEach((location) => {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Não adicione contextos desnecessários
+### <span style="color:5D0E41 ">Não adicione contextos desnecessários</span>
 
 Se o nome de sua classe/objeto já lhe diz alguma coisa, não as repita nos nomes de suas variáveis.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const Car = {
@@ -168,7 +170,7 @@ function paintCar(car, color) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const Car = {
@@ -184,11 +186,11 @@ function paintCar(car, color) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Use argumentos padrões ao invés de curto circuitar ou usar condicionais
+### <span style="color:5D0E41 ">Use argumentos padrões ao invés de curto circuitar ou usar condicionais</span>
 
 Argumentos padrões são geralmente mais limpos do que curto circuitos. Esteja ciente que se você usá-los, sua função apenas irá fornecer valores padrões para argumentos `undefined`. Outros valores "falsos" como `''`, `""`, `false`, `null`, `0`, e `NaN`, não serão substituídos por valores padrões.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function createMicrobrewery(name) {
@@ -197,7 +199,7 @@ function createMicrobrewery(name) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function createMicrobrewery(breweryName = "Hipster Brew Co.") {
@@ -207,9 +209,9 @@ function createMicrobrewery(breweryName = "Hipster Brew Co.") {
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Funções**
+## <span style="color:A0153E ">**Funções**</span>
 
-### Argumentos de funções (idealmente 2 ou menos)
+### <span style="color:5D0E41 ">Argumentos de funções (idealmente 2 ou menos)</span>
 
 Limitar a quantidade de parâmetros de uma função é incrivelmente importante porque torna mais fácil testá-la. Ter mais que três leva a uma explosão combinatória onde você tem que testar muitos casos diferentes com cada argumento separadamente.
 
@@ -223,7 +225,7 @@ Para tornar mais óbvio quais as propriedades que as funções esperam, você po
 2. Desestruturação também clona os valores primitivos específicos do objeto passado como argumento para a função. Isso pode ajudar a evitar efeitos colaterais. Nota: objetos e vetores que são desestruturados a partir do objeto passado por argumento NÃO são clonados.
 3. Linters podem te alertar sobre propriedades não utilizadas, o que seria impossível sem usar desestruturação.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function createMenu(title, body, buttonText, cancellable) {
@@ -231,7 +233,7 @@ function createMenu(title, body, buttonText, cancellable) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function createMenu({ title, body, buttonText, cancellable }) {
@@ -248,11 +250,11 @@ createMenu({
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Funções devem fazer uma coisa
+### <span style="color:5D0E41 ">Funções devem fazer uma coisa</span>
 
 Essa é de longe a regra mais importante em engenharia de software. Quando funções fazem mais que uma coisa, elas se tornam difíceis de serem compostas, testadas e raciocinadas. Quando você pode isolar uma função para realizar apenas uma ação, elas podem ser refatoradas facilmente e seu código ficará muito mais limpo. Se você não levar mais nada desse guia além disso, você já estará na frente de muitos desenvolvedores.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function emailClients(clients) {
@@ -265,7 +267,7 @@ function emailClients(clients) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function emailActiveClients(clients) {
@@ -280,9 +282,9 @@ function isActiveClient(client) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Nomes de funções devem dizer o que elas fazem
+### <span style="color:5D0E41 ">Nomes de funções devem dizer o que elas fazem</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function addToDate(date, month) {
@@ -295,7 +297,7 @@ const date = new Date();
 addToDate(date, 1);
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function addMonthToDate(month, date) {
@@ -308,11 +310,11 @@ addMonthToDate(1, date);
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Funções devem ter apenas um nível de abstração
+### <span style="color:5D0E41 ">Funções devem ter apenas um nível de abstração</span>
 
 Quando você tem mais de um nível de abstração sua função provavelmente esta fazendo coisas demais. Dividir suas funções leva a reutilização e testes mais fáceis.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function parseBetterJSAlternative(code) {
@@ -339,7 +341,7 @@ function parseBetterJSAlternative(code) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function tokenize(code) {
@@ -378,7 +380,7 @@ function parseBetterJSAlternative(code) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Remova código duplicado
+### <span style="color:5D0E41 ">Remova código duplicado</span>
 
 Faça absolutamente seu melhor para evitar código duplicado. Código duplicado quer dizer que existe mais de um lugar onde você deverá alterar algo se precisar mudar alguma lógica.
 
@@ -389,7 +391,7 @@ coisas levemente diferentes, que possuem muito em comum, mas suas diferenças lh
 
 Conseguir a abstração correta é crítico, por isso que você deveria seguir os princípios SOLID descritos na seção _Classes_. Abstrações ruins podem ser piores do que código duplicado, então tome cuidado! Dito isto, se você puder fazer uma boa abstração, faça-a! Não repita a si mesmo, caso contrário você se pegará atualizando muitos lugares toda vez que precisar mudar qualquer coisinha.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function showDeveloperList(developers) {
@@ -423,7 +425,7 @@ function showManagerList(managers) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function showEmployeeList(employees) {
@@ -452,9 +454,9 @@ function showEmployeeList(employees) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Defina (set) objetos padrões com Object.assign
+### <span style="color:5D0E41 ">Defina (set) objetos padrões com Object.assign</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const menuConfig = {
@@ -475,7 +477,7 @@ function createMenu(config) {
 createMenu(menuConfig);
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const menuConfig = {
@@ -505,11 +507,11 @@ createMenu(menuConfig);
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Não use flags como parâmetros de funções
+### <span style="color:5D0E41 ">Não use flags como parâmetros de funções</span>
 
 Flags falam para o seu usuário que sua função faz mais de uma coisa. Funções devem fazer apenas uma coisa. Divida suas funções se elas estão seguindo caminhos de código diferentes baseadas em um valor booleano.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function createFile(name, temp) {
@@ -521,7 +523,7 @@ function createFile(name, temp) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function createFile(name) {
@@ -535,7 +537,7 @@ function createTempFile(name) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite Efeitos Colaterais (parte 1)
+### <span style="color:5D0E41 ">Evite Efeitos Colaterais (parte 1)</span>
 
 Uma função produz um efeito colateral se ela faz alguma coisa que não seja receber um valor de entrada e retornar outro(s) valor(es). Um efeito colateral pode ser escrever em um arquivo, modificar uma variável global, ou acidentalmente transferir todo seu dinheiro para um estranho.
 
@@ -543,7 +545,7 @@ Agora, você precisa de efeitos colaterais ocasionalmente no seu programa. Como 
 
 O ponto principal é evitar armadilhas como compartilhar o estado entre objetos sem nenhuma estrutura, usando tipos de dados mutáveis que podem ser escritos por qualquer coisa, e não centralizando onde seu efeito colateral acontece. Se você conseguir fazer isto, você será muito mais feliz que a grande maioria dos outros programadores.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 // Variável global referenciada pela função seguinte
@@ -559,7 +561,7 @@ splitIntoFirstAndLastName();
 console.log(name); // ['Ryan', 'McDermott'];
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function splitIntoFirstAndLastName(name) {
@@ -575,7 +577,7 @@ console.log(newName); // ['Ryan', 'McDermott'];
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite Efeitos Colaterais (parte 2)
+### <span style="color:5D0E41 ">Evite Efeitos Colaterais (parte 2)</span>
 
 Em JavaScript, tipos primitivos são passados por valor e objetos/vetores são passados por referência. No caso de objetos e vetores, se sua função faz uma mudança em um vetor de um carrinho de compras, por exemplo, adicionando um item para ser comprado, então qualquer outra função que use o vetor `cart` também será afetada por essa adição. Isso pode ser ótimo, mas também pode ser ruim. Vamos imaginar uma situação ruim:
 
@@ -589,7 +591,7 @@ Duas ressalvas desta abordagem:
 
 2. Clonar objetos grandes pode ser bastante caro em termos de desempenho. Com sorte, na prática isso não é um problema, porque existem [ótimas bibliotecas](https://facebook.github.io/immutable-js/) que permitem que este tipo de programação seja rápida e não seja tão intensa no uso de memória quanto seria se você clonasse manualmente objetos e vetores.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const addItemToCart = (cart, item) => {
@@ -597,7 +599,7 @@ const addItemToCart = (cart, item) => {
 };
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const addItemToCart = (cart, item) => {
@@ -605,11 +607,11 @@ const addItemToCart = (cart, item) => {
 };
 ```
 
-### Não escreva em funções globais
+### <span style="color:5D0E41 ">Não escreva em funções globais</span>
 
 Poluir globais é uma prática ruim em JavaScript porque você pode causar conflito com outra biblioteca e o usuário da sua API não faria a menor ideia até que ele tivesse um exceção sendo levantada em produção. Vamos pensar em um exemplo: e se você quisesse estender o método nativo Array do JavaScript para ter um método `diff` que poderia mostrar a diferença entre dois vetores? Você poderia escrever sua nova função em `Array.prototype`, mas poderia colidir com outra biblioteca que tentou fazer a mesma coisa. E se esta outra biblioteca estava apenas usando `diff` para achar a diferença entre o primeiro e último elemento de um vetor? É por isso que seria muito melhor usar as classes padrões do ES2015/ES6 e apenas estender o `Array` global.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 Array.prototype.diff = function diff(comparisonArray) {
@@ -618,7 +620,7 @@ Array.prototype.diff = function diff(comparisonArray) {
 };
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class SuperArray extends Array {
@@ -631,11 +633,11 @@ class SuperArray extends Array {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Favoreça programação funcional sobre programação imperativa
+### <span style="color:5D0E41 ">Favoreça programação funcional sobre programação imperativa</span>
 
 JavaScript não é uma linguagem funcional da mesma forma que Haskell é, mas tem um toque de funcional em si. Linguagens funcionais são mais limpas e fáceis de se testar. Favoreça esse tipo de programação quando puder.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const programmerOutput = [
@@ -664,7 +666,7 @@ for (let i = 0; i < programmerOutput.length; i++) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const programmerOutput = [
@@ -695,9 +697,9 @@ const totalOutput = programmerOutput
 
 **[⬆ volta ao topo](#Índice)**
 
-### Encapsule condicionais
+### <span style="color:5D0E41 ">Encapsule condicionais</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 if (fsm.state === "fetching" && isEmpty(listNode)) {
@@ -705,7 +707,7 @@ if (fsm.state === "fetching" && isEmpty(listNode)) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function shouldShowSpinner(fsm, listNode) {
@@ -719,9 +721,9 @@ if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite negações de condicionais
+### <span style="color:5D0E41 ">Evite negações de condicionais</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function isDOMNodeNotPresent(node) {
@@ -733,7 +735,7 @@ if (!isDOMNodeNotPresent(node)) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function isDOMNodePresent(node) {
@@ -747,11 +749,11 @@ if (isDOMNodePresent(node)) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite condicionais
+### <span style="color:5D0E41 ">Evite condicionais</span>
 
 Esta parece ser uma tarefa impossível. Da primeira vez que as pessoas escutam isso, a maioria diz, “como eu supostamente faria alguma coisa sem usar `if`? ” A resposta é que você pode usar polimorfismo para realizar a mesma tarefa em diversos casos. A segunda questão é geralmente, “bom, isso é ótimo, mas porque eu deveria fazer isso?” A resposta é um conceito de código limpo aprendido previamente: uma função deve fazer apenas uma coisa. Quando você tem classes e funções que tem declarações `if`, você esta dizendo para seu usuário que sua função faz mais de uma coisa. Relembre-se, apenas uma coisa.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class Airplane {
@@ -769,7 +771,7 @@ class Airplane {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class Airplane {
@@ -800,11 +802,11 @@ class Cessna extends Airplane {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite checagem de tipos (parte 1)
+### <span style="color:5D0E41 ">Evite checagem de tipos (parte 1)</span>
 
 JavaScript não possui tipos, o que significa que suas funções podem receber qualquer tipo de argumento. Algumas vezes esta liberdade pode te morder, e se torna tentador fazer checagem de tipos em suas funções. Existem muitas formas de evitar ter que fazer isso. A primeira coisa a se considerar são APIs consistentes.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function travelToTexas(vehicle) {
@@ -816,7 +818,7 @@ function travelToTexas(vehicle) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function travelToTexas(vehicle) {
@@ -826,11 +828,11 @@ function travelToTexas(vehicle) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite checagem de tipos (parte 2)
+### <span style="color:5D0E41 ">Evite checagem de tipos (parte 2)</span>
 
 Se você estiver trabalhando com valores primitivos básicos como strings e inteiros, e você não pode usar polimorfismo, mas ainda sente a necessidade de checar o tipo, você deveria considerar usar TypeScript. É uma excelente alternativa para o JavaScript normal, já que fornece uma tipagem estática sobre a sintaxe padrão do JavaScript. O problema com checagem manual em JavaScript é que para se fazer bem feito requer tanta verborragia extra que a falsa “tipagem-segura” que você consegue não compensa pela perca de legibilidade. Mantenha seu JavaScript limpo, escreve bons testes, e tenha boas revisões de código. Ou, de outra forma, faça tudo isso, mas com TypeScript (que, como eu falei, é uma ótima alternativa!).
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function combine(val1, val2) {
@@ -845,7 +847,7 @@ function combine(val1, val2) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function combine(val1, val2) {
@@ -855,11 +857,11 @@ function combine(val1, val2) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Não otimize demais
+### <span style="color:5D0E41 ">Não otimize demais</span>
 
 Navegadores modernos fazem muitas otimizações por debaixo dos panos em tempo de execução. Muitas vezes, se você estiver otimizando, está apenas perdendo o seu tempo. [Existem bons recursos](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) para se verificar onde falta otimização. Foque nesses por enquanto, até que eles sejam consertados caso seja possível.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 // Em navegadores antigos, cada iteração de `list.length` não cacheada seria custosa
@@ -869,7 +871,7 @@ for (let i = 0, len = list.length; i < len; i++) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 for (let i = 0; i < list.length; i++) {
@@ -879,11 +881,11 @@ for (let i = 0; i < list.length; i++) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Remova código morto
+### <span style="color:5D0E41 ">Remova código morto</span>
 
 Código morto é tão ruim quanto código duplicado. Não existe nenhum motivo para deixá-lo em seu código. Se ele não estiver sendo chamado, livre-se dele. Ele ainda estará a salvo no seu histórico de versionamento se ainda precisar dele.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function oldRequestModule(url) {
@@ -898,7 +900,7 @@ const req = newRequestModule;
 inventoryTracker("apples", req, "www.inventory-awesome.io");
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function newRequestModule(url) {
@@ -911,9 +913,9 @@ inventoryTracker("apples", req, "www.inventory-awesome.io");
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Objetos e Estruturas de Dados**
+## <span style="color:A0153E ">**Objetos e Estruturas de Dados**</span>
 
-### Use getters e setters
+### <span style="color:5D0E41 ">Use getters e setters</span>
 
 Usar getters e setters para acessar dados em objetos é bem melhor que simplesmente procurar por uma propriedade em um objeto. "Por quê?", você deve perguntar. Bem, aqui vai uma lista desorganizada de motivos:
 
@@ -923,7 +925,7 @@ Usar getters e setters para acessar dados em objetos é bem melhor que simplesme
 - Mais fácil de adicionar logs e tratamento de erros quando dando get and set;
 - Você pode usar lazy loading nas propriedades de seu objeto, digamos, por exemplo, pegando ele de um servidor.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function makeBankAccount() {
@@ -939,7 +941,7 @@ const account = makeBankAccount();
 account.balance = 100;
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function makeBankAccount() {
@@ -970,11 +972,11 @@ account.setBalance(100);
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Faça objetos terem membros privados
+### <span style="color:5D0E41 ">Faça objetos terem membros privados</span>
 
 Isto pode ser alcançado através de closures (para ES5 e além).
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const Employee = function (name) {
@@ -991,7 +993,7 @@ delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: undefined
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function makeEmployee(name) {
@@ -1010,13 +1012,13 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Classes**
+## <span style="color:A0153E ">**Classes**</span>
 
-### Prefira classes do ES2015/ES6 ao invés de funções simples do ES5
+### <span style="color:5D0E41 ">Prefira classes do ES2015/ES6 ao invés de funções simples do ES5</span>
 
 É muito difícil conseguir que herança de classe, construtores, e definições de métodos sejam legíveis para classes de ES5 clássicas. Se você precisa de herança (e esteja ciente que você talvez não precise), então prefira classes ES2015/ES6. Entretanto, prefira funções pequenas ao invés de classes até que você precise de objetos maiores e mais complexos.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const Animal = function (age) {
@@ -1056,7 +1058,7 @@ Human.prototype.constructor = Human;
 Human.prototype.speak = function speak() {};
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class Animal {
@@ -1094,11 +1096,11 @@ class Human extends Mammal {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Use encadeamento de métodos
+### <span style="color:5D0E41 ">Use encadeamento de métodos</span>
 
 Este padrão é muito útil em JavaScript e você o verá em muitas bibliotecas como jQuery e Lodash. Ele permite que seu código seja expressivo e menos verboso. Por esse motivo, eu digo, use encadeamento de métodos e dê uma olhada em como o seu código ficará mais limpo. Em suas funções de classes, apenas retorne `this` no final de cada função, e você poderá encadear mais métodos de classe nele.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class Car {
@@ -1130,7 +1132,7 @@ car.setColor("pink");
 car.save();
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class Car {
@@ -1170,7 +1172,7 @@ const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Prefira composição ao invés de herança
+### <span style="color:5D0E41 ">Prefira composição ao invés de herança</span>
 
 Como dito famosamente em [_Padrão de projeto_](https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software) pela Gangue dos Quatro, você deve preferir composição sobre herança onde você puder. Existem muitas boas razões para usar herança e muitas boas razões para se usar composição. O ponto principal para essa máxima é que se sua mente for instintivamente para a herança, tente pensar se composição poderia modelar melhor o seu problema. Em alguns casos pode.
 
@@ -1180,7 +1182,7 @@ Você deve estar pensando então, "quando eu deveria usar herança?" Isso depend
 2. Você pode reutilizar código de classes de base (Humanos podem se mover como todos os animais).
 3. Você quer fazer mudanças globais para classes derivadas mudando apenas a classe base. (Mudar o custo calórico para todos os animais quando se movem).
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class Employee {
@@ -1204,7 +1206,7 @@ class EmployeeTaxData extends Employee {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class EmployeeTaxData {
@@ -1231,13 +1233,13 @@ class Employee {
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **SOLID**
+## <span style="color:A0153E ">**SOLID**</span>
 
-### Princípio da Responsabilidade Única (SRP)
+### <span style="color:5D0E41 ">Princípio da Responsabilidade Única (SRP)</span>
 
 Como dito em Código Limpo, "Nunca deveria haver mais de um motivo para uma classe ter que mudar". É tentador empacotar uma classe em excesso com muitas funcionalidades, como quando você pode levar apenas uma mala em seu voo. O problema com isso é que sua classe não será conceitualmente coesa e dar-lhe-á diversos motivos para mudá-la. Minimizar o número de vezes que você precisa mudar uma classe é importante, porque, se muitas funcionalidades estão em uma classe e você mudar uma porção dela, pode ser difícil entender como isto afetará outros módulos que dependem dela no seu código.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class UserSettings {
@@ -1257,7 +1259,7 @@ class UserSettings {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class UserAuth {
@@ -1286,11 +1288,11 @@ class UserSettings {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Princípio do Aberto/Fechado (OCP)
+### <span style="color:5D0E41 ">Princípio do Aberto/Fechado (OCP)</span>
 
 Como foi dito por Bertrand Meyer, "entidades de software (classes, módulos, funções, etc.) devem se manter abertas para extensões, mas fechadas para modificações." Mas o que isso significa? Esse princípio basicamente diz que você deve permitir que usuários adicionem novas funcionalidades sem mudar código já existente.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class AjaxAdapter extends Adapter {
@@ -1334,7 +1336,7 @@ function makeHttpCall(url) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class AjaxAdapter extends Adapter {
@@ -1374,13 +1376,13 @@ class HttpRequester {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Princípio de Substituição de Liskov (LSP)
+### <span style="color:5D0E41 ">Princípio de Substituição de Liskov (LSP)</span>
 
 Esse é um termo assustador para um conceito extremamente simples. É formalmente definido como “Se S é um subtipo de T, então objetos do tipo T podem ser substituídos por objetos com o tipo S (i.e., objetos do tipo S podem substituir objetos do tipo T) sem alterar nenhuma das propriedades desejáveis de um programa (corretude, desempenho em tarefas, etc.).” Esta é uma definição ainda mais assustadora.
 
 A melhor explicação para este conceito é se você tiver uma classe pai e uma classe filha, então a classe base e a classe filha pode ser usadas indistintamente sem ter resultados incorretos. Isso ainda pode ser confuso, então vamos dar uma olhada no exemplo clássico do Quadrado-Retângulo (Square-Rectangle). Matematicamente, um quadrado é um retângulo, mas se você modelá-lo usando uma relação “isto-é” através de herança, você rapidamente terá problemas.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class Rectangle {
@@ -1435,7 +1437,7 @@ const rectangles = [new Rectangle(), new Rectangle(), new Square()];
 renderLargeRectangles(rectangles);
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class Shape {
@@ -1484,7 +1486,7 @@ renderLargeShapes(shapes);
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Princípio da Segregação de Interface (ISP)
+### <span style="color:5D0E41 ">Princípio da Segregação de Interface (ISP)</span>
 
 JavaScript não possui interfaces então esse princípio não se aplica estritamente como os outros. Entretanto, é importante e relevante até mesmo com a falta de um sistema de tipos em JavaScript.
 
@@ -1492,7 +1494,7 @@ ISP diz que "Clientes não devem ser forcados a depender de interfaces que eles 
 
 Um bom exemplo para se observar que demonstra esse princípio em JavaScript é de classes que requerem objetos de configurações grandes. Não pedir para clientes definirem grandes quantidades de opções é benéfico, porque na maioria das vezes eles não precisarão de todas as configurações. Torná-las opcionais ajuda a prevenir uma “interferência gorda”.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class DOMTraverser {
@@ -1518,7 +1520,7 @@ const $ = new DOMTraverser({
 });
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class DOMTraverser {
@@ -1554,7 +1556,7 @@ const $ = new DOMTraverser({
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Princípio da Inversão de Dependência (DIP)
+### <span style="color:5D0E41 ">Princípio da Inversão de Dependência (DIP)</span>
 
 Este princípio nos diz duas coisas essenciais:
 
@@ -1565,7 +1567,7 @@ Isso pode ser difícil de entender a princípio, mas se você já trabalhou com 
 
 Como dito anteriormente, JavaScript não possui interfaces, então as abstrações que são necessárias são contratos implícitos. Que quer dizer que, os métodos e as classes que um objeto/classe expõe para outros objeto/classe. No exemplo abaixo, o contrato implícito é que qualquer módulo de Request para `InventoryTracker` terá um método `requestItems`:
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class InventoryRequester {
@@ -1598,7 +1600,7 @@ const inventoryTracker = new InventoryTracker(["apples", "bananas"]);
 inventoryTracker.requestItems();
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class InventoryTracker {
@@ -1645,15 +1647,15 @@ inventoryTracker.requestItems();
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Testes**
+## <span style="color:A0153E ">**Testes**
 
 Testes são mais importantes que entregas. Se você não possui testes ou uma quantidade inadequada, então toda vez que você entregar seu código você não terá certeza se você não quebrou alguma coisa. Decidir o que constitui uma quantidade adequada é responsabilidade do seu time, mas ter 100% de cobertura (todas as sentenças e branches) é a maneira que se alcança uma alta confiança e uma paz de espírito em desenvolvimento. Isso quer dizer que além de ter um ótimo framework de testes, você também precisa usar uma [boa ferramenta de cobertura](http://gotwarlost.github.io/istanbul/).
 
 Não existe desculpa para não escrever testes. Existem [diversos frameworks de testes em JS ótimos](http://jstherightway.org/#testing-tools), então encontre um que seu time prefira. Quando você encontrar um que funciona para seu time, então tenha como objetivo sempre escrever testes para cada nova funcionalidade/módulo que você introduzir. Se seu método preferido for Desenvolvimento Orientado a Testes (TDD), isso é ótimo, mas o ponto principal é apenas ter certeza que você está alcançado suas metas de cobertura antes de lançar qualquer funcionalidade, ou refatorar uma já existente.
 
-### Um conceito por teste
+### <span style="color:5D0E41 ">Um conceito por teste</span>
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 import assert from "assert";
@@ -1677,7 +1679,7 @@ describe("MakeMomentJSGreatAgain", () => {
 });
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 import assert from "assert";
@@ -1705,13 +1707,13 @@ describe("MakeMomentJSGreatAgain", () => {
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Concorrência**
+## <span style="color:A0153E ">**Concorrência**</span>
 
-### Use Promessas, não callbacks
+### <span style="color:5D0E41 ">Use Promessas, não callbacks</span>
 
 Callbacks não são limpos, e eles causam uma quantidade excessiva de aninhamentos. A partir de ES2015/ES6, Promessas são um tipo nativo global. Use-as!
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 import { get } from "request";
@@ -1735,7 +1737,7 @@ get(
 );
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 import { get } from "request";
@@ -1755,11 +1757,11 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Async/Await são ainda mais limpas que Promessas
+### <span style="color:5D0E41 ">Async/Await são ainda mais limpas que Promessas</span>
 
 Promessas são uma alternativa bem mais limpa que callbacks, mas o ES2017/ES8 traz `async` e `await` que oferecem uma solução ainda mais limpa. Tudo o que você precisa é uma função que tem como prefixo a palavra-chave `async`, e então você pode escrever sua lógica imperativamente sem usar `then` para encadear suas funções. Use isto se você puder tirar vantagem das funcionalidades do ES2017/ES8 hoje!
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 import { get } from "request-promise";
@@ -1777,7 +1779,7 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
   });
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 import { get } from "request-promise";
@@ -1798,14 +1800,14 @@ async function getCleanCodeArticle() {
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Tratamento de Erros**
+## <span style="color:A0153E ">**Tratamento de Erros**</span>
 
 `throw error` é uma coisa boa! Eles significam que o programa identificou
 com sucesso quando algo deu errado e está permitindo que você saiba parando
 a execução da função no processo atual, fechando o processo (em Node), e
 notificando você no console com a pilha de processos.
 
-### Não ignore erros capturados
+### <span style="color:5D0E41 ">Não ignore erros capturados</span>
 
 Não fazer nada com um erro capturado não te dá a habilidade de resolvê-lo ou
 reagir ao erro informado. Exibir um log no console(`console.log`) não é muito
@@ -1814,7 +1816,7 @@ coisas impressas no console. Se você envolver qualquer pedaço de código em um
 `try/catch` isso significa que você acredita que um erro pode ocorrer lá e então
 você deveria ter um plano, ou criar caminho de código para quando isso ocorrer.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 try {
@@ -1824,7 +1826,7 @@ try {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 try {
@@ -1837,12 +1839,12 @@ try {
 }
 ```
 
-### Não ignore promessas rejeitadas
+### <span style="color:5D0E41 ">Não ignore promessas rejeitadas</span>
 
 Pela mesma razão que você não deveria ignorar erros
 captados de `try/catch`
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 getdata()
@@ -1854,7 +1856,7 @@ getdata()
   });
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 getdata()
@@ -1874,7 +1876,7 @@ getdata()
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Formatação**
+## <span style="color:A0153E ">**Formatação**</span>
 
 Formatação é subjetiva. Como muitas regras aqui, não há nenhuma regra fixa e
 rápida que você precisa seguir. O ponto principal é NÃO DISCUTA sobre formatação.
@@ -1885,14 +1887,14 @@ formatação.
 Para coisas que não possam utilizar formatação automática (identação, tabs vs. espaços,
 aspas simples vs. duplas, etc.) olhe aqui para alguma orientação.
 
-### Utilize capitalização consistente
+### <span style="color:5D0E41 ">Utilize capitalização consistente</span>
 
 JavaScript não é uma linguagem tipada, então a capitalização diz muito sobre
 suas variáveis, funções, etc. Estas regras são subjetivas, então sua equipe
 pode escolher o que quiserem. O ponto é, não importa o que vocês todos escolham,
 apenas seja consistente.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 const DAYS_IN_WEEK = 7;
@@ -1908,7 +1910,7 @@ class animal {}
 class Alpaca {}
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 const DAYS_IN_WEEK = 7;
@@ -1926,14 +1928,14 @@ class Alpaca {}
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Funções e chamadas de funções devem estar próximas
+### <span style="color:5D0E41 ">Funções e chamadas de funções devem estar próximas</span>
 
 Se uma função chamar outra, mantenha estas funções verticalmente próximas no arquivo
 fonte. Em um cenário ideal, manter a chamada logo acima da função. Nós tendemos a
 ler códigos de cima para baixo, como num jornal. Por causa disso, faça o seu código
 desta maneira.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 class PerformanceReview {
@@ -1973,7 +1975,7 @@ const review = new PerformanceReview(employee);
 review.perfReview();
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 class PerformanceReview {
@@ -2015,13 +2017,13 @@ review.perfReview();
 
 **[⬆ voltar ao topo](#Índice)**
 
-## **Comentários**
+## <span style="color:A0153E ">**Comentários**</span>
 
-### Apenas comente coisas que tenham complexidade de lógica de negócio.
+### <span style="color:5D0E41 ">Apenas comente coisas que tenham complexidade de lógica de negócio.</span>
 
 Comentários são uma desculpa, não um requisito. Um bom código documenta-se, _a maior parte_, por si só.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 function hashIt(data) {
@@ -2043,7 +2045,7 @@ function hashIt(data) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function hashIt(data) {
@@ -2062,11 +2064,11 @@ function hashIt(data) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Não deixe código comentado na sua base de código
+### <span style="color:5D0E41 ">Não deixe código comentado na sua base de código</span>
 
 Controle de versão existe por uma razão. Deixar códigos velhos no seu histórico.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 doStuff();
@@ -2075,7 +2077,7 @@ doStuff();
 // doSoMuchStuff();
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 doStuff();
@@ -2083,13 +2085,13 @@ doStuff();
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Não comente registro de alterações
+### <span style="color:5D0E41 ">Não comente registro de alterações</span>
 
 Lembre-se, utilize controle de versão! Não tem necessidade em deixar códigos
 inutilizados, códigos comentados e especialmente registros de alterações.
 Utilize `git log` para pegar o histórico!
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 /**
@@ -2103,7 +2105,7 @@ function combine(a, b) {
 }
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 function combine(a, b) {
@@ -2113,12 +2115,12 @@ function combine(a, b) {
 
 **[⬆ voltar ao topo](#Índice)**
 
-### Evite marcadores de posição
+### <span style="color:5D0E41 ">Evite marcadores de posição</span>
 
 Eles geralmente criam ruídos. Deixe que as funções e nomes de variáveis em conjunto
 com a devida identação e formatação deem a estrutura visual para o seu código.
 
-**Ao invés disso:**
+<span style="color:FFC700 ">**Ao invés disso:**</span>
 
 ```javascript
 ////////////////////////////////////////////////////////////////////////////////
@@ -2137,7 +2139,7 @@ const actions = function () {
 };
 ```
 
-**Dessa forma:**
+<span style="color: 007F73 ">**Dessa forma:**</span>
 
 ```javascript
 $scope.model = {
@@ -2152,7 +2154,7 @@ const actions = function () {
 
 **[⬆ voltar ao topo](#Índice)**
 
-## Créditos
+## <span style="color:A0153E ">Créditos</span>
 
 - Author - [Creator Developers Team](https://github.com/musicpro-live)
 - MusicPRO Website - [MusicPRO Live](https://musicpro.live/sobre)
