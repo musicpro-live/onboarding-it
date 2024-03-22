@@ -107,7 +107,7 @@ Esse conceito vem do termo Sprint, em inglês, que se refere a um tipo de corrid
 
 A duração da Sprint é time-boxed, isto é, limitada a um tempo, e pode variar de uma a quatro semanas, dependendo da produtividade do time para entregar uma funcionalidade completa (no caso dos projetos de TI) ou uma parte funcional do produto (em projetos de outras áreas). Porém, uma vez decidida a duração da Sprint, ela deve ser mantida até o final do projeto.
 
-<br>Duração da nossa sprint:</b> <i>Duas Semanas.</i>
+<b>Duração da nossa sprint:</b> <i>Duas Semanas.</i>
 
 [⬆ voltar ao topo](#índice)
 
